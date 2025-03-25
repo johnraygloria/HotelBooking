@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import LoginPage from '../LoginPage';
 import RegisterPage from '../RegisterPage';
 import loginIMG from "../../../assets/loginIMG.png";
-// import IMGLILO from "../../../assets/loginIMG.png"
 
 export default function AuthContainer() {
   const [isLogin, setIsLogin] = useState(true);
@@ -21,7 +20,7 @@ export default function AuthContainer() {
   };
 
   return (
-    <div className="relative flex h-screen w-full overflow-hidden bg-gradient-to-br from-black to-red-900 opacity-90">
+    <div className="relative  h-screen w-full overflow-hidden bg-gradient-to-br from-black to-red-900 opacity-90">
       <div className={`absolute flex h-full w-1/2 transition-all duration-500 ease-in-out ${
         isLogin ? 'left-0' : 'left-1/2'
       } ${isAnimating ? (isLogin ? '-translate-x-full' : 'translate-x-full') : ''}`}>
@@ -56,7 +55,7 @@ export default function AuthContainer() {
               </p>
               <button
                 onClick={toggleAuthMode}
-                className="rounded-full border-2 border-white bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white hover:text-gray-800"
+                className="cursor-pointer rounded-full border-2 border-white bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white hover:text-gray-800"
               >
                 {isLogin ? 'Sign Up' : 'Sign In'}
               </button>
