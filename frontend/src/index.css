@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+@keyframes swirlGradient  {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 30% 70%; }
+  50% { background-position: 80% 20%; }
+  75% { background-position: 40% 60%; }
+  100% { background-position: 0% 0%; }
+  }
+  
+  .animate-swirlGradient  {
+    background-size: 100% 200%;
+    animation: swirlGradient  10s infinite ease-in-out;
+  }
+
+  
+
+  @keyframes interstellarPulse {
+    0%, 100% { filter: brightness(0.8) contrast(1); transform: scale(1); }
+    50% { filter: brightness(1.2) contrast(1.5); transform: scale(1); }
+  }
+  
+  .animate-interstellarPulse {
+    background-size: 150% 100%;
+    animation: interstellarPulse 5s infinite ease-in-out;
+  }
+  

@@ -10,7 +10,7 @@ function RegisterPage({onToggleAuth = () => { } }) {
                         <input
                             type="fullname"
                             id="fullname"
-                            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-500 bg-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 placeholder-gray-400 transition duration-200"
                             placeholder="Enter your Fullname"
                         />
                     </div>
@@ -21,7 +21,7 @@ function RegisterPage({onToggleAuth = () => { } }) {
                         <input
                             type="email"
                             id="email"
-                            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-500 bg-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 placeholder-gray-400 transition duration-200"
                             placeholder="Enter your email"
                         />
                     </div>
@@ -32,7 +32,7 @@ function RegisterPage({onToggleAuth = () => { } }) {
                         <input
                             type="password"
                             id="password" 
-                            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-500 bg-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 placeholder-gray-400 transition duration-200"
                             placeholder="Enter your password"
                         />
                     </div>
@@ -43,11 +43,11 @@ function RegisterPage({onToggleAuth = () => { } }) {
                         <input
                             type="confirmpassword"
                             id="confirmpassword" 
-                            className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+                            className="w-full px-4 py-3 border border-gray-500 bg-transparent rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500 placeholder-gray-400 transition duration-200"
                             placeholder="Confirm your password"
                         />
                     </div>  
-                    <button className="cursor-pointer w-full px-4 py-3 bg-gradient-to-r from-black to-red-700 text-white rounded-3xl transition duration-300 ease-in-out hover:opacity-80">
+                    <button className="relative w-full px-4 py-3 text-white rounded-3xl transition duration-300 ease-in-out hover:opacity-80 bg-gradient-to-l from-black via-red-900 to-black animate-gradientMove">
                         Register
                     </button>
                     <div className="flex justify-center mt-8">
