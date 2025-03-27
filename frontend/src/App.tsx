@@ -9,8 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path='/' element={<LandingPage/>}/>
         <Route path="/*" element={<AuthContainer />} />
-        <Route path='LandingPage' element={<LandingPage/>}/>
         <Route path='/LandingPage/LoginPage' element={<LoginPage onToggleAuth={undefined}/>}/>
         <Route path='/LoginPage/RegisterPage' element={<RegisterPage onToggleAuth={undefined}/>}/>
       </Routes>

@@ -16,8 +16,8 @@
   
 
   @keyframes interstellarPulse {
-    0%, 100% { filter: brightness(0.8) contrast(1); transform: scale(1); }
-    50% { filter: brightness(1.2) contrast(1.5); transform: scale(1); }
+    0%, 100% { filter: brightness(1) contrast(2); transform: scale(1); }
+    30% { filter: brightness(0.9) contrast(1.5); transform: scale(1); }
   }
   
   .animate-interstellarPulse {
