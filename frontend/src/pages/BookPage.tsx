@@ -1,7 +1,7 @@
 function BookingPage() {
   return (
     <div>
-    booking page11
+    booking page
     </div>
   )
 
