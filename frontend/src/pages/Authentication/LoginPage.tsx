@@ -1,8 +1,8 @@
-export default function LoginPage({ onToggleAuth = () => {} }) {
+function LoginPage({ onToggleAuth = () => {} }) {
     return (
 
-      <div className="w-1/2 text-white">
-        <h1 className="text-5xl font-bold mb-6">Get Started</h1>
+      <div className="w-full text-white -z-50">
+        <h1 className="text-4xl font-bold mb-6">Get Started</h1>
         <div className="mb-6 bg-transparent">
           <label htmlFor="email" className="block text-sm font-medium mb-2">
             Email:
@@ -43,4 +43,4 @@ export default function LoginPage({ onToggleAuth = () => {} }) {
       </div>
     );
   }
-  
+  export default LoginPage;

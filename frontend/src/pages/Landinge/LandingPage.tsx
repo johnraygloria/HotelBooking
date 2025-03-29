@@ -5,11 +5,11 @@ function LandingPage() {
     const navigate = useNavigate();
 
 const handleGetStarted = () => {
- navigate("/LandingPage/login"); 
+ navigate('/loginpage'); 
 }
     return (
-      <div className="relative min-h-screen flex items-center justify-center text-white px-6">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_black,_#735858,_black)] opacity-100  animate-interstellarPulse ">
+      <div className="relative w-screen min-h-screen flex items-center justify-center text-white px-6">
+        <div className="absolute  inset-0 bg-[radial-gradient(circle_at_top_left,_black,_#735858,_black)] opacity-100  animate-interstellarPulse ">
           <img src={LandingePage} alt=""
           className="opacity-15 h-full w-full" />
         </div>
@@ -21,10 +21,15 @@ const handleGetStarted = () => {
             Book appointments with ease and stay organized with our reliable booking system. 
             Simplify your workflow and focus on what matters most.
           </p>
-          <button className="bg-[radial-gradient(circle_at_top,_black,_#7f1d1d,_black)] cursor-pointer opacity-90 px-6 py-3 rounded-lg text-lg font-semibold transition duration-300 animate-swirlGradient "
+          {/* <button className="bg-[radial-gradient(circle_at_top,_black,_#7f1d1d,_black)] cursor-pointer opacity-90 px-6 py-3 rounded-lg text-lg font-semibold transition duration-300 animate-swirlGradient "
           onClick={handleGetStarted}>
             Get Started
-          </button>
+          </button> */}
+
+          <button className="relative cursor-pointer px-6 py-3 rounded-lg text-lg font-semibold text-white transition duration-300 shadow-lg animate-gradientFlow"
+  onClick={handleGetStarted}>
+  Get Started
+</button>
         </div>
       </div>
     );

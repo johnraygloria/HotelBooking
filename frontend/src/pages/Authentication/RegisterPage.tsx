@@ -1,8 +1,8 @@
 
 function RegisterPage({onToggleAuth = () => { } }) {
   return (
-                <div className="w-1/2 text-white">
-                    <h1 className="text-5xl text-center  text-white font-bold mb-6">Create an Account</h1>
+                <div className="w-full text-white -z-50">
+                    <h1 className="text-4xl  text-white font-bold mb-6">Create an Account</h1>
                     <div className="mb-6">
                         <label htmlFor="email" className="block text-sm font-medium mb-2">
                             Fullname:

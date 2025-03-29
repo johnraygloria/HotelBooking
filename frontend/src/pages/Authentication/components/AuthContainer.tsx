@@ -9,8 +9,9 @@ export default function AuthContainer() {
   const navigate = useNavigate();
 
   const toggleAuthMode = () => {
+    const newPath = isLogin ? 'registerpage' : '/loginpage';
     setIsLogin(!isLogin);
-    navigate(isLogin ? '/LandingPage/login/register' : '/LandingPage/login/', { replace: true });
+    navigate(newPath, { replace: true });
   };
 
   return (
@@ -18,12 +19,14 @@ export default function AuthContainer() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_black,_#7f1d1d,_black)] opacity-90 animate-gradientMove" />
 
       <div
-        className={`absolute flex h-full w-1/2 transition-all duration-800 ease-in-out ${
+        className={`absolute flex h-full w-1/2 transition-all duration-900 ease-in-out ${
           isLogin ? "right-0" : "right-1/2"
         }`}
       >
         <div className="flex h-full w-full items-center justify-center p-8">
+          <div className='w-full max-w-md rounded-3xl backdrop-blur-xl bg-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border border-white/20 p-8'>
           {isLogin ? <LoginPage onToggleAuth={toggleAuthMode} /> : <RegisterPage onToggleAuth={toggleAuthMode} />}
+          </div>
         </div>
       </div>
 
@@ -34,7 +37,7 @@ export default function AuthContainer() {
       >
         <div className="relative h-full w-full py-3 px-3">
           <img src={loginIMG} className="h-full w-full object-cover opacity-80" alt="Auth background" />
-          <div className="absolute inset-0 flex items-center justify-center bg-opacity-40 p-8 text-white">
+          <div className="absolute inset-0 flex items-center justify-center bg-opacity-40 p-8 text-white z-100">
             <div className="text-center">
               <h2 className="mb-4 text-4xl font-bold">{isLogin ? "Hello, Friend!" : "Welcome Back!"}</h2>
               <p className="mb-6 text-xl">

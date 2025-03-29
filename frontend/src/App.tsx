@@ -1,23 +1,36 @@
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import './App.css';
 
-import './App.css'
-import LoginPage from './pages/Authentication/LoginPage'
-import AuthContainer from "./pages/Authentication/components/AuthContainer"
-import RegisterPage from './pages/Authentication/RegisterPage'
-import LandingPage from './pages/Landinge/LandingPage'
-import BookingPage from './pages/BookPage'
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-function App() {
+import LoginPage from './pages/Authentication/LoginPage';
+import AuthContainer from "./pages/Authentication/components/AuthContainer";
+import RegisterPage from './pages/Authentication/RegisterPage';
+import LandingPage from './pages/Landinge/LandingPage';
+import BookingPage from './pages/Book_HomePage/BookPage';
+import Navbar from './pages/context/Navbar';
+
+function AppContent() {
+  const location = useLocation();
+  const shouldhideNavbar =["/loginpage","/registerpage"];
+  const hideNavbar = shouldhideNavbar.some(route => location.pathname.startsWith(route))
   return (
-    <BrowserRouter>
+    <>
+    {!hideNavbar && <Navbar />}
       <Routes>
-      <Route path='/' element={<LandingPage/>}/>
-        <Route path="/*" element={<AuthContainer />} />
-        <Route path='/LandingPage/LoginPage' element={<LoginPage onToggleAuth={undefined}/>}/>
-        <Route path='/LoginPage/RegisterPage' element={<RegisterPage onToggleAuth={undefined}/>}/>
-        <Route path='/BookingPage' element={<BookingPage/>}/>
+      <Route path="/*" element={<AuthContainer />} />
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/landingpage/loginpage/" element={<LoginPage/>} />
+        <Route path="/landingpage/loginpage/registerpage" element={<RegisterPage onToggleAuth={undefined} />} />
+        <Route path="/BookingPage" element={<BookingPage />} />
+
       </Routes>
-    </BrowserRouter>
-  )
+    </>
+  );
 }
 
-export default App
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  );
+}
