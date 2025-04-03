@@ -5,7 +5,7 @@ import LoginPage from './pages/Authentication/LoginPage';
 import AuthContainer from "./pages/Authentication/components/AuthContainer";
 import RegisterPage from './pages/Authentication/RegisterPage';
 import LandingPage from './pages/Landinge/LandingPage';
-import BookingPage from './pages/Book_HomePage/BookPage';
+import BookPage from './pages/booking'
 import Navbar from './pages/context/Navbar';
 
 function AppContent() {
@@ -20,7 +20,7 @@ function AppContent() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/landingpage/loginpage/" element={<LoginPage/>} />
         <Route path="/landingpage/loginpage/registerpage" element={<RegisterPage onToggleAuth={undefined} />} />
-        <Route path="/BookingPage" element={<BookingPage />} />
+        <Route path="/BookPage" element={<BookPage />} />
 
       </Routes>
     </>
